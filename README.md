@@ -30,12 +30,17 @@ _Built with the tools and technologies:_
 
 - [Overview](#overview)
 - [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
 - [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Testing](#testing)
+  - [Clone the Repository](#1-clone-the-repository)
+  - [Install Requirements](#2-install-requirements)
+  - [Run the Application](#3-run-the-application)
+- [Model](#model)
+- [Analytics](#analytics)
+- [Export Options](#export-options)
 - [License](#license)
+- [Author](#author)
 - [Screenshots](#screenshots)
 
 ---
