@@ -55,8 +55,6 @@ It's designed to streamline quality assurance in **smart manufacturing**, reduce
 
 ## Features
 
-🚀
-
 - 📤 **Upload or Capture Images**  
   Choose between uploading images or capturing directly using a webcam.
 
@@ -79,8 +77,6 @@ It's designed to streamline quality assurance in **smart manufacturing**, reduce
 
 ## Tech Stack
 
-🛠
-
 - **Frontend/UI**: Streamlit, HTML/CSS (Custom Styling)
 - **Machine Learning**: TensorFlow + Keras
 - **Image Processing**: OpenCV, Pillow
@@ -90,8 +86,6 @@ It's designed to streamline quality assurance in **smart manufacturing**, reduce
 ---
 
 ## Project Structure
-
-📂
 
 ```
 packinspect-anomaly-detector/
@@ -111,8 +105,6 @@ packinspect-anomaly-detector/
 ---
 
 ## Getting Started
-
-🧰
 
 ### 1. Clone the Repository
 
@@ -139,8 +131,6 @@ Open your browser at [http://localhost:8501](http://localhost:8501)
 
 ## Model
 
-🎯
-
 The application uses a binary classification model trained using the included `train_model.py` script and exported in `.keras` format.
 
 - **Input shape:** 224x224 RGB
@@ -151,8 +141,6 @@ The application uses a binary classification model trained using the included `t
 
 ## Analytics
 
-📈
-
 - Pie chart showing Good vs. Defect count
 - Optional: Extend with bar graphs or trend charts using Streamlit/Pandas
 
@@ -160,15 +148,11 @@ The application uses a binary classification model trained using the included `t
 
 ## Export Options
 
-📤
-
 - ✅ Download detection history as a CSV report
 
 ---
 
 ## License
-
-📃
 
 This project is licensed under the MIT License.
 You can use, modify, and distribute it freely with proper attribution.
@@ -177,15 +161,11 @@ You can use, modify, and distribute it freely with proper attribution.
 
 ## Author
 
-✨
-
 Developed with ❤️ by [@devaldaki3](https://github.com/devaldaki3)
 
 Feel free to contribute, raise issues, or suggest improvements.
 
 ## Screenshots
-
-📸
 
 **Prediction Result**
 ![Prediction Result](assets/prediction_result.png)
