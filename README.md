@@ -8,6 +8,10 @@ _Detects Defects, Ensures Quality, Accelerates Innovation_
 ![python](https://img.shields.io/badge/python-100%25-blue)
 ![languages](https://img.shields.io/badge/languages-1-blue)
 
+<!-- App screenshot for quick visual reference -->
+
+![App Screenshot](assets/Dashboard.png)
+
 _Built with the tools and technologies:_
 
 ![Keras](https://img.shields.io/badge/Keras-red?logo=keras)
