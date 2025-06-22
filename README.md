@@ -78,19 +78,20 @@ It's designed to streamline quality assurance in **smart manufacturing**, reduce
 
 ## 📂 Project Structure
 
+```
 packinspect-anomaly-detector/
-│
-├── app.py # Main Streamlit application
+├── app.py                  # Main Streamlit application
 ├── models/
-│ └── keras_model.keras # Pre-trained ML model
+│   └── keras_model.keras   # Pre-trained ML model
 ├── data/
-│ └── labels.txt # Contains 'Good' and 'Defect'
+│   └── labels.txt          # Contains 'Good' and 'Defect'
 ├── assets/
-│ └── overview_dataset.jpg # Sidebar visual banner
-├── requirements.txt # Python dependencies
+│   └── overview_dataset.jpg # Sidebar visual banner
+├── requirements.txt        # Python dependencies
 ├── logs/
-│ └── defect_log.csv # Detection history log
-└── README.md # Project documentation (this file)
+│   └── defect_log.csv      # Detection history log
+└── README.md               # Project documentation (this file)
+```
 
 ---
 
