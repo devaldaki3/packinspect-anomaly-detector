@@ -25,20 +25,6 @@ st.set_page_config(
     layout="wide"
 )
 
-# Custom CSS for wider sidebar
-st.markdown(
-    """
-    <style>
-    section[data-testid="stSidebar"] {
-        min-width: 300px !important;
-        width: 300px !important;
-        max-width: 340px !important;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
 # Custom CSS
 st.markdown("""
 <style>
