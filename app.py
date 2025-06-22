@@ -124,7 +124,7 @@ with st.sidebar:
         <div style="text-align:center;">
             <img src="data:image/png;base64,{}" class="sidebar-img" />
         </div>
-        <div style='text-align:center; font-size:1.5rem; font-weight:bold; margin: 1rem 0 1.5rem 0;'>Anomaly Detection Tool</div>
+        <div style='text-align:center; font-size:1.5rem; font-weight:bold; margin: 1rem 0 1.2rem 0;'>Anomaly Detection Tool</div>
     """.format(sidebar_img_b64), unsafe_allow_html=True)
 
     # Navigation section
