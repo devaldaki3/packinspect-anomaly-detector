@@ -1,3 +1,8 @@
 [theme]
 base="dark"
-primaryColor="#009688" 
+primaryColor="#009688"
+
+[server]
+headless = true
+port = 8501
+enableCORS = false
