@@ -22,7 +22,7 @@ except Exception as e:
 
 # Page configuration
 st.set_page_config(
-    page_title="PackInspect - Capsule Anomaly Detection",
+    page_title="PackInspect - Bottle Anomaly Detection",
     page_icon="📦",
     layout="wide"
 )
