@@ -45,7 +45,7 @@ _Built with the tools and technologies:_
 
 ---
 
-## 📌 Overview
+## Overview
 
 **PackInspect** is a low-code visual inspection tool built using **TensorFlow** and **Streamlit**. It allows users to detect defects in bottle images (or similar packaging components) by uploading images or capturing them via webcam.
 
@@ -53,7 +53,9 @@ It's designed to streamline quality assurance in **smart manufacturing**, reduce
 
 ---
 
-## 🚀 Features
+## Features
+
+🚀
 
 - 📤 **Upload or Capture Images**  
   Choose between uploading images or capturing directly using a webcam.
@@ -75,7 +77,9 @@ It's designed to streamline quality assurance in **smart manufacturing**, reduce
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
+
+🛠
 
 - **Frontend/UI**: Streamlit, HTML/CSS (Custom Styling)
 - **Machine Learning**: TensorFlow + Keras
@@ -85,7 +89,9 @@ It's designed to streamline quality assurance in **smart manufacturing**, reduce
 
 ---
 
-## 📂 Project Structure
+## Project Structure
+
+📂
 
 ```
 packinspect-anomaly-detector/
@@ -104,7 +110,9 @@ packinspect-anomaly-detector/
 
 ---
 
-## 🧰 Getting Started
+## Getting Started
+
+🧰
 
 ### 1. Clone the Repository
 
@@ -129,7 +137,9 @@ Open your browser at [http://localhost:8501](http://localhost:8501)
 
 ---
 
-## 🎯 Model
+## Model
+
+🎯
 
 The application uses a binary classification model trained using the included `train_model.py` script and exported in `.keras` format.
 
@@ -139,33 +149,43 @@ The application uses a binary classification model trained using the included `t
 
 ---
 
-## 📈 Analytics
+## Analytics
+
+📈
 
 - Pie chart showing Good vs. Defect count
 - Optional: Extend with bar graphs or trend charts using Streamlit/Pandas
 
 ---
 
-## 📤 Export Options
+## Export Options
+
+📤
 
 - ✅ Download detection history as a CSV report
 
 ---
 
-## 📃 License
+## License
+
+📃
 
 This project is licensed under the MIT License.
 You can use, modify, and distribute it freely with proper attribution.
 
 ---
 
-## ✨ Author
+## Author
+
+✨
 
 Developed with ❤️ by [@devaldaki3](https://github.com/devaldaki3)
 
 Feel free to contribute, raise issues, or suggest improvements.
 
-## 📸 Screenshots
+## Screenshots
+
+📸
 
 **Prediction Result**
 ![Prediction Result](assets/prediction_result.png)
