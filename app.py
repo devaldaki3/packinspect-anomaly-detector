@@ -9,8 +9,6 @@ from datetime import datetime
 import pandas as pd
 import base64
 import plotly.express as px
-from fpdf import FPDF
-import tempfile
 
 # Load class names before sidebar
 try:
