@@ -1,7 +1,6 @@
 opencv-python
 streamlit
-tensorflow-cpu==2.16.1
-numpy
+tensorflow-cpu==2.15.0
 pandas
 Pillow
 plotly
