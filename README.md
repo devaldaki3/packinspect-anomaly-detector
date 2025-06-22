@@ -162,9 +162,6 @@ Feel free to contribute, raise issues, or suggest improvements.
 
 ## 📸 Screenshots
 
-**Dashboard**
-![Dashboard](assets/Dashboard.png)
-
 **Prediction Result**
 ![Prediction Result](assets/prediction_result.png)
 
