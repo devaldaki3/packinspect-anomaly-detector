@@ -1,3 +1,5 @@
+<div align="center">
+
 # PACKINSPECT-ANOMALY-DETECTOR
 
 _Detects Defects, Ensures Quality, Accelerates Innovation_
@@ -6,7 +8,8 @@ _Detects Defects, Ensures Quality, Accelerates Innovation_
 ![python](https://img.shields.io/badge/python-100%25-blue)
 ![languages](https://img.shields.io/badge/languages-1-blue)
 
-Built with the tools and technologies:  
+_Built with the tools and technologies:_
+
 ![Keras](https://img.shields.io/badge/Keras-red?logo=keras)
 ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?logo=streamlit)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?logo=tensorflow)
@@ -14,6 +17,8 @@ Built with the tools and technologies:
 ![Python](https://img.shields.io/badge/Python-3776AB?logo=python)
 ![Plotly](https://img.shields.io/badge/Plotly-3F4F75?logo=plotly)
 ![pandas](https://img.shields.io/badge/pandas-150458?logo=pandas)
+
+</div>
 
 ---
 
