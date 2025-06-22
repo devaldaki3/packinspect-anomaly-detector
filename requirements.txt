@@ -1,6 +1,6 @@
-streamlit
+streamlit>=1.25.0
 tensorflow==2.12.0
-numpy
+numpy>=1.23
 pandas
 Pillow
 plotly
