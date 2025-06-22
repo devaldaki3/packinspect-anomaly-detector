@@ -43,6 +43,8 @@ _Built with the tools and technologies:_
 - [Author](#author)
 - [Screenshots](#screenshots)
 
+[⬆️ Back to Top](#table-of-contents)
+
 ---
 
 ## Overview
