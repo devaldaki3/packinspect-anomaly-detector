@@ -122,7 +122,7 @@ Open your browser at [http://localhost:8501](http://localhost:8501)
 
 ## 🎯 Model
 
-The application uses a binary classification model trained via Google Teachable Machine and exported in .keras format.
+The application uses a binary classification model trained using the included `train_model.py` script and exported in `.keras` format.
 
 - **Input shape:** 224x224 RGB
 - **Output:** Sigmoid (binary classification)
@@ -140,7 +140,6 @@ The application uses a binary classification model trained via Google Teachable 
 ## 📤 Export Options
 
 - ✅ Download detection history as a CSV report
-- 🔄 Can be extended to store results in a cloud database
 
 ---
 
