@@ -43,17 +43,11 @@ _Built with the tools and technologies:_
 - [Author](#author)
 - [Screenshots](#screenshots)
 
-[⬆️ Back to Top](#table-of-contents)
-
----
-
 ## Overview
 
 **PackInspect** is a low-code visual inspection tool built using **TensorFlow** and **Streamlit**. It allows users to detect defects in bottle images (or similar packaging components) by uploading images or capturing them via webcam.
 
 It's designed to streamline quality assurance in **smart manufacturing**, reduce manual errors, and provide real-time feedback using deep learning.
-
----
 
 ## Features
 
@@ -75,8 +69,6 @@ It's designed to streamline quality assurance in **smart manufacturing**, reduce
 - 🧪 **Interactive Sidebar**  
   Includes collapsible guides, model info, and accuracy stats.
 
----
-
 ## Tech Stack
 
 - **Frontend/UI**: Streamlit, HTML/CSS (Custom Styling)
@@ -84,8 +76,6 @@ It's designed to streamline quality assurance in **smart manufacturing**, reduce
 - **Image Processing**: OpenCV, Pillow
 - **Data Handling**: NumPy, Pandas
 - **Visualization**: Streamlit charts
-
----
 
 ## Project Structure
 
@@ -103,8 +93,6 @@ packinspect-anomaly-detector/
 │   └── defect_log.csv      # Detection history log
 └── README.md               # Project documentation (this file)
 ```
-
----
 
 ## Getting Started
 
@@ -129,8 +117,6 @@ streamlit run app.py
 
 Open your browser at [http://localhost:8501](http://localhost:8501)
 
----
-
 ## Model
 
 The application uses a binary classification model trained using the included `train_model.py` script and exported in `.keras` format.
@@ -139,27 +125,19 @@ The application uses a binary classification model trained using the included `t
 - **Output:** Sigmoid (binary classification)
 - **Classes:** Good, Defect
 
----
-
 ## Analytics
 
 - Pie chart showing Good vs. Defect count
 - Optional: Extend with bar graphs or trend charts using Streamlit/Pandas
 
----
-
 ## Export Options
 
 - ✅ Download detection history as a CSV report
-
----
 
 ## License
 
 This project is licensed under the MIT License.
 You can use, modify, and distribute it freely with proper attribution.
-
----
 
 ## Author
 
@@ -172,4 +150,4 @@ Feel free to contribute, raise issues, or suggest improvements.
 **Prediction Result**
 ![Prediction Result](assets/prediction_result.png)
 
----
+[⬆️ Back to Top](#table-of-contents)
