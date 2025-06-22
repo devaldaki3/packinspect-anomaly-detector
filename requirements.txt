@@ -1,6 +1,7 @@
-streamlit>=1.31.0
-tensorflow>=2.15.0
 opencv-python
+streamlit
+tensorflow
+numpy
 pandas
 Pillow
 plotly
