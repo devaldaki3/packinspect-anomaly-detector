@@ -26,6 +26,8 @@ _Built with the tools and technologies:_
 
 ![App Screenshot](assets/Dashboard.png)
 
+<hr>
+
 <!-- Deployed App Link -->
 
 <p align="center">
