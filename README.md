@@ -30,7 +30,7 @@ _Built with the tools and technologies:_
 
 <p align="center">
   <a href="https://packinspect-anomaly-detector-e2thrdrsbwp6qhov2tal3x.streamlit.app/" target="_blank">
-    <img src="https://img.shields.io/badge/Live%20Demo-Streamlit%20App-brightgreen?logo=streamlit" alt="Streamlit App"/>
+    <img src="https://img.shields.io/badge/Live%20Demo-Streamlit%20App-brightgreen?logo=streamlit" alt="Streamlit App" height="40"/>
   </a>
 </p>
 
