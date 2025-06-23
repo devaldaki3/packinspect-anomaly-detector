@@ -26,6 +26,14 @@ _Built with the tools and technologies:_
 
 ![App Screenshot](assets/Dashboard.png)
 
+<!-- Deployed App Link -->
+
+<p align="center">
+  <a href="https://packinspect-anomaly-detector-e2thrdrsbwp6qhov2tal3x.streamlit.app/" target="_blank">
+    <img src="https://img.shields.io/badge/Live%20Demo-Streamlit%20App-brightgreen?logo=streamlit" alt="Streamlit App"/>
+  </a>
+</p>
+
 ## Table of Contents
 
 - [Overview](#overview)
