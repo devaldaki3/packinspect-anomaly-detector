@@ -6,6 +6,7 @@ from PIL import Image
 import io
 import os
 from datetime import datetime
+from zoneinfo import ZoneInfo
 import pandas as pd
 import base64
 import plotly.express as px
@@ -341,7 +342,7 @@ if selected == "Dashboard":
                             </div>
                             """, unsafe_allow_html=True)
                     st.session_state.history.insert(0, {
-                        "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                        "timestamp": datetime.now(ZoneInfo("Asia/Kolkata")).strftime("%Y-%m-%d %H:%M:%S"),
                         "class": label,
                         "confidence": f"{confidence*100:.2f}%"
                     })
@@ -403,7 +404,7 @@ if selected == "Dashboard":
                                 </div>
                                 """, unsafe_allow_html=True)
                         st.session_state.history.insert(0, {
-                            "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                            "timestamp": datetime.now(ZoneInfo("Asia/Kolkata")).strftime("%Y-%m-%d %H:%M:%S"),
                             "class": label,
                             "confidence": f"{confidence*100:.2f}%"
                         })
@@ -454,7 +455,7 @@ if selected == "Dashboard":
                         </div>
                         """, unsafe_allow_html=True)
                 st.session_state.history.insert(0, {
-                    "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                    "timestamp": datetime.now(ZoneInfo("Asia/Kolkata")).strftime("%Y-%m-%d %H:%M:%S"),
                     "class": label,
                     "confidence": f"{confidence*100:.2f}%"
                 })
@@ -515,4 +516,4 @@ elif selected == "Defect Log":
         st.info("No detection history yet.")
 
 # Footer
-st.markdown(f"<div class='footer'>PackInspect | Last updated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}</div>", unsafe_allow_html=True)
+st.markdown(f"<div class='footer'>PackInspect | Last updated: {datetime.now(ZoneInfo('Asia/Kolkata')).strftime('%Y-%m-%d %H:%M:%S')}</div>", unsafe_allow_html=True)
