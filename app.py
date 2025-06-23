@@ -467,7 +467,8 @@ elif selected == "Defect Log":
     
     if st.session_state.history:
         df = pd.DataFrame(st.session_state.history)
-        st.dataframe(df)
+        df.index = df.index + 1  # Index 1 se start ho
+        st.dataframe(df)         # Index dikhega
 
         chart_data = df['class'].value_counts().reset_index()
         chart_data.columns = ['Label', 'Count']
@@ -508,9 +509,9 @@ elif selected == "Defect Log":
         logs_dir = "logs"
         os.makedirs(logs_dir, exist_ok=True)
         csv_path = os.path.join(logs_dir, "defect_log.csv")
-        df.to_csv(csv_path, index=False)
+        df.to_csv(csv_path, index=True)  # Index CSV me bhi aayega
 
-        csv = df.to_csv(index=False).encode('utf-8')
+        csv = df.to_csv(index=True).encode('utf-8')
         st.download_button("⬇️ Download CSV", csv, "defect_log.csv", "text/csv")
     else:
         st.info("No detection history yet.")
