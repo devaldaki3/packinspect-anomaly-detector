@@ -25,7 +25,7 @@ st.set_page_config(
     layout="wide"
 )
 
-# Custom CSS
+# CSS
 st.markdown("""
 <style>
     .main-header {
@@ -112,7 +112,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# Sidebar image base64 encoding
+# Sidebar image
 with open("assets/overview_dataset.jpg", "rb") as img_file:
     sidebar_img_b64 = base64.b64encode(img_file.read()).decode()
 
@@ -127,7 +127,6 @@ with st.sidebar:
         <div style='text-align:center; font-size:1.2rem; font-weight:bold; margin: 1rem 0 1.5rem 0;'>Anomaly Detection Tool</div>
     """.format(sidebar_img_b64), unsafe_allow_html=True)
 
-    # Navigation section
     st.markdown(
         """
         <div style='font-size:1.3rem; font-weight:bold; color:#fff; margin-bottom:0.8rem; display:flex; align-items:center;'>
@@ -142,7 +141,6 @@ with st.sidebar:
         label_visibility="collapsed"
     )
 
-    # Divider after Navigation
     st.markdown("<hr style='border: 0; height: 1px; background: #444; margin: 1.2rem 0;'>", unsafe_allow_html=True)
 
     st.markdown(
@@ -189,7 +187,6 @@ with st.sidebar:
         unsafe_allow_html=True
     )
 
-    # How to Use (expanded by default)
     with st.expander("How to Use", expanded=False):
         st.markdown("""
 1. **Upload or capture an image**  
@@ -202,22 +199,18 @@ with st.sidebar:
    See past predictions and download CSV report if needed.
         """)
 
-    # Model Info (collapsed by default)
     with st.expander("Model Info", expanded=False):
         st.markdown("**Model Classes:**")
         for cls in class_names:
             st.markdown(f"- {cls}")
 
-    # Divider after How to Use & Model Info, before Model Accuracy
     st.markdown("<hr style='border: 0; height: 1px; background: #444; margin: 1.2rem 0;'>", unsafe_allow_html=True)
 
-    # Model Accuracy outside the expander
     accuracy_value = 0.925
     st.markdown("**Model Accuracy:**")
     st.progress(accuracy_value)
     st.markdown(f"<small>Approx. Accuracy: <b>{accuracy_value*100:.2f}%</b></small>", unsafe_allow_html=True)
 
-    # Small footer at the bottom of the sidebar
     st.markdown("<div style='text-align:center; color:#888; font-size:0.8rem; margin-top:2rem;'><small>Made with ❤️ for smart manufacturing | © 2025</small></div>", unsafe_allow_html=True)
 
 # Load model
@@ -236,7 +229,7 @@ def predict(image):
     img = image.resize((224, 224))
     img_array = tf.keras.preprocessing.image.img_to_array(img)
     img_array = np.expand_dims(img_array, 0) / 255.0
-    prediction = model.predict(img_array)[0][0]  # For sigmoid output
+    prediction = model.predict(img_array)[0][0]
     label = class_names[0] if prediction < 0.5 else class_names[1]
     confidence = 1 - prediction if label == class_names[0] else prediction
     return label, confidence
@@ -277,7 +270,6 @@ if selected == "Dashboard":
         else:
             mode = None
 
-    # Add a divider before the confidence threshold label
     st.markdown("<hr style='border: 0; height: 1px; background: #444; margin: 1.2rem 0;'>", unsafe_allow_html=True)
     st.markdown(
         "<span style='font-size:1rem; font-weight:700; color:#fff;'>Set confidence threshold</span>",
@@ -295,7 +287,6 @@ if selected == "Dashboard":
 
     if input_method == "Upload Image":
         if mode == "Single Image":
-            # Add a divider before the file uploader
             st.markdown("<hr style='border: 0; height: 1px; background: #444; margin: 0.5rem 0 0.7rem 0;'>", unsafe_allow_html=True)
             st.markdown(
                 "<span style='font-size:1.12rem; font-weight:700; color:#fff;'>Upload an image</span>",
@@ -314,7 +305,6 @@ if selected == "Dashboard":
                     buffered = io.BytesIO()
                     image.save(buffered, format="PNG")
                     img_b64 = base64.b64encode(buffered.getvalue()).decode()
-                    # Determine glow color based on prediction
                     label, confidence = predict(image)
                     glow_color = 'rgba(34, 197, 94, 0.4)' if label.lower() == 'good' else 'rgba(248, 113, 113, 0.4)'
                     st.markdown(f"""
@@ -357,7 +347,6 @@ if selected == "Dashboard":
                     })
                     st.session_state.history = st.session_state.history[:5]
         else:  # Batch Upload
-            # Add a divider before the file uploader
             st.markdown("<hr style='border: 0; height: 1px; background: #444; margin: 0.5rem 0 0.7rem 0;'>", unsafe_allow_html=True)
             st.markdown(
                 "<span style='font-size:1.12rem; font-weight:700; color:#fff;'>Upload image(s)</span>",
@@ -378,7 +367,6 @@ if selected == "Dashboard":
                         buffered = io.BytesIO()
                         image.save(buffered, format="PNG")
                         img_b64 = base64.b64encode(buffered.getvalue()).decode()
-                        # Determine glow color based on prediction
                         label, confidence = predict(image)
                         glow_color = 'rgba(34, 197, 94, 0.4)' if label.lower() == 'good' else 'rgba(248, 113, 113, 0.4)'
                         st.markdown(f"""
@@ -414,7 +402,6 @@ if selected == "Dashboard":
                                     <div style='font-size:1.1rem;'><b>Status:</b> Requires attention</div>
                                 </div>
                                 """, unsafe_allow_html=True)
-                        # Add to defect log history
                         st.session_state.history.insert(0, {
                             "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
                             "class": label,
@@ -431,7 +418,6 @@ if selected == "Dashboard":
                 buffered = io.BytesIO()
                 image.save(buffered, format="PNG")
                 img_b64 = base64.b64encode(buffered.getvalue()).decode()
-                # Determine glow color based on prediction
                 label, confidence = predict(image)
                 glow_color = 'rgba(34, 197, 94, 0.4)' if label.lower() == 'good' else 'rgba(248, 113, 113, 0.4)'
                 st.markdown(f"""
@@ -482,16 +468,14 @@ elif selected == "Defect Log":
         df = pd.DataFrame(st.session_state.history)
         st.dataframe(df)
 
-        # Prepare data
         chart_data = df['class'].value_counts().reset_index()
         chart_data.columns = ['Label', 'Count']
 
-        # Two columns for charts
         st.markdown("<hr style='border: 0; height: 1px; background: #444; margin: 1.2rem 0;'>", unsafe_allow_html=True)
         col1, col2 = st.columns(2)
 
         with col1:
-            st.markdown("### 🥧 Pie Chart - Defect Distribution")
+            st.markdown("### 🎯 Pie Chart - Defect Distribution")
             pie_chart = px.pie(
                 chart_data,
                 names='Label',
@@ -520,13 +504,11 @@ elif selected == "Defect Log":
             )
             st.plotly_chart(bar_chart, use_container_width=True)
 
-        # Save CSV to logs folder
         logs_dir = "logs"
         os.makedirs(logs_dir, exist_ok=True)
         csv_path = os.path.join(logs_dir, "defect_log.csv")
         df.to_csv(csv_path, index=False)
 
-        # Download CSV
         csv = df.to_csv(index=False).encode('utf-8')
         st.download_button("⬇️ Download CSV", csv, "defect_log.csv", "text/csv")
     else:
