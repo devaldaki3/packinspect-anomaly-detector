@@ -310,7 +310,7 @@ if selected == "Dashboard":
                     glow_color = 'rgba(34, 197, 94, 0.4)' if label.lower() == 'good' else 'rgba(248, 113, 113, 0.4)'
                     st.markdown(f"""
                     <div style="text-align:center;">
-                        <img src="data:image/png;base64,{img_b64}" style="width:350px; max-width:100%; border-radius:20px; box-shadow: 0 0 40px {glow_color}; background-color: #000000; padding:0;" />
+                        <img src="data:image/png;base64,{img_b64}" style="max-width:100%; border-radius:20px; box-shadow: 0 0 40px {glow_color}; background-color: #000000; padding:0;" />
                         <div style="color:#bbb; font-size:0.85rem; margin-top:6px;">🖼️ Original: {filename}</div>
                     </div>
                     """, unsafe_allow_html=True)
@@ -372,7 +372,7 @@ if selected == "Dashboard":
                         glow_color = 'rgba(34, 197, 94, 0.4)' if label.lower() == 'good' else 'rgba(248, 113, 113, 0.4)'
                         st.markdown(f"""
                         <div style="text-align:center;">
-                            <img src="data:image/png;base64,{img_b64}" style="width:350px; max-width:100%; border-radius:20px; box-shadow: 0 0 40px {glow_color}; background-color: #000000; padding:0;" />
+                            <img src="data:image/png;base64,{img_b64}" style="max-width:100%; border-radius:20px; box-shadow: 0 0 40px {glow_color}; background-color: #000000; padding:0;" />
                             <div style="color:#bbb; font-size:0.85rem; margin-top:6px;">🖼️ Original: {filename}</div>
                         </div>
                         """, unsafe_allow_html=True)
@@ -423,7 +423,7 @@ if selected == "Dashboard":
                 glow_color = 'rgba(34, 197, 94, 0.4)' if label.lower() == 'good' else 'rgba(248, 113, 113, 0.4)'
                 st.markdown(f"""
                 <div style="text-align:center;">
-                    <img src="data:image/png;base64,{img_b64}" style="width:350px; max-width:100%; border-radius:20px; box-shadow: 0 0 40px {glow_color}; background-color: #000000; padding:0;" />
+                    <img src="data:image/png;base64,{img_b64}" style="max-width:100%; border-radius:20px; box-shadow: 0 0 40px {glow_color}; background-color: #000000; padding:0;" />
                     <div style="color:#bbb; font-size:0.85rem; margin-top:6px;">🖼️ Original: {filename}</div>
                 </div>
                 """, unsafe_allow_html=True)
