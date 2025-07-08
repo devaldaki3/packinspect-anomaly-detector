@@ -463,12 +463,14 @@ elif selected == "Defect Log":
     st.title("📋 Recent Detection History")
     
     if st.session_state.history:
-        # UI me sirf 5 latest dikhaye, latest sabse upar
+        # UI table: sirf 5 latest
         df = pd.DataFrame(st.session_state.history[:5])
         df.index = df.index + 1 
         st.dataframe(df) 
 
-        chart_data = df['class'].value_counts().reset_index()
+        # Charts: puri history
+        full_df = pd.DataFrame(st.session_state.history)
+        chart_data = full_df['class'].value_counts().reset_index()
         chart_data.columns = ['Label', 'Count']
 
         st.markdown("<hr style='border: 0; height: 1px; background: #444; margin: 1.2rem 0;'>", unsafe_allow_html=True)
@@ -508,7 +510,6 @@ elif selected == "Defect Log":
         os.makedirs(logs_dir, exist_ok=True)
         csv_path = os.path.join(logs_dir, "defect_log.csv")
         # CSV aur download ke liye puri history ka DataFrame
-        full_df = pd.DataFrame(st.session_state.history[::-1])
         full_df.to_csv(csv_path, index=True) 
 
         csv = full_df.to_csv(index=True).encode('utf-8')
