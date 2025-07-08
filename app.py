@@ -346,7 +346,6 @@ if selected == "Dashboard":
                         "class": label,
                         "confidence": f"{confidence*100:.2f}%"
                     })
-                    st.session_state.history = st.session_state.history[:5]
         else:  # Batch Upload
             st.markdown("<hr style='border: 0; height: 1px; background: #444; margin: 0.5rem 0 0.7rem 0;'>", unsafe_allow_html=True)
             st.markdown(
@@ -408,7 +407,6 @@ if selected == "Dashboard":
                             "class": label,
                             "confidence": f"{confidence*100:.2f}%"
                         })
-                        st.session_state.history = st.session_state.history[:5]
     else:
         camera_file = st.camera_input("Capture Image")
         if camera_file:
@@ -459,14 +457,14 @@ if selected == "Dashboard":
                     "class": label,
                     "confidence": f"{confidence*100:.2f}%"
                 })
-                st.session_state.history = st.session_state.history[:5]
 
 # Defect Log Page
 elif selected == "Defect Log":
     st.title("📋 Recent Detection History")
     
     if st.session_state.history:
-        df = pd.DataFrame(st.session_state.history)
+        # UI me sirf 5 latest dikhaye
+        df = pd.DataFrame(st.session_state.history[:5][::-1])
         df.index = df.index + 1 
         st.dataframe(df) 
 
@@ -509,9 +507,11 @@ elif selected == "Defect Log":
         logs_dir = "logs"
         os.makedirs(logs_dir, exist_ok=True)
         csv_path = os.path.join(logs_dir, "defect_log.csv")
-        df.to_csv(csv_path, index=True) 
+        # CSV aur download ke liye puri history ka DataFrame
+        full_df = pd.DataFrame(st.session_state.history[::-1])
+        full_df.to_csv(csv_path, index=True) 
 
-        csv = df.to_csv(index=True).encode('utf-8')
+        csv = full_df.to_csv(index=True).encode('utf-8')
         st.download_button("⬇️ Download CSV", csv, "defect_log.csv", "text/csv")
     else:
         st.info("No detection history yet.")
