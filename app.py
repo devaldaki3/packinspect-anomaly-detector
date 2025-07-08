@@ -463,8 +463,8 @@ elif selected == "Defect Log":
     st.title("📋 Recent Detection History")
     
     if st.session_state.history:
-        # UI me sirf 5 latest dikhaye
-        df = pd.DataFrame(st.session_state.history[:5][::-1])
+        # UI me sirf 5 latest dikhaye, latest sabse upar
+        df = pd.DataFrame(st.session_state.history[:5])
         df.index = df.index + 1 
         st.dataframe(df) 
 
