@@ -45,7 +45,7 @@ with open("labels.txt", "w") as f:
 
 # Load MobileNetV2 base
 base_model = MobileNetV2(input_shape=(img_size, img_size, 3), include_top=False, weights='imagenet')
-base_model.trainable = False  # Freeze pretrained layers
+base_model.trainable = False  
 
 # Add custom classification head
 x = base_model.output
@@ -57,7 +57,7 @@ predictions = Dense(1, activation='sigmoid')(x)
 
 model = Model(inputs=base_model.input, outputs=predictions)
 
-# Compile
+
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
 # Train
@@ -70,6 +70,6 @@ history = model.fit(
     callbacks=[early_stop]
 )
 
-# Save
+
 model.save("keras_model.keras")
-print("✅ Model saved as keras_model.keras")
+print("Model saved as keras_model.keras")
